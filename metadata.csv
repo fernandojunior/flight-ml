@@ -1,0 +1,22 @@
+column; description
+id; Um identificador único para cada registro de voo.
+year; O ano em que o voo ocorreu (2013 neste conjunto de dados).
+month; O mês em que o voo ocorreu (1 a 12).
+day; O dia do mês em que o voo ocorreu (1 a 31).
+dep_time; O horário local real de partida do voo, no formato 24 horas (hhmm).
+sched_dep_time; O horário local programado de partida do voo, no formato 24 horas (hhmm).
+dep_delay; A diferença entre os horários real e programado de partida do voo, em minutos. Um valor positivo indica uma partida; atrasada, enquanto um valor negativo indica uma partida adiantada.
+arr_time; O horário local real de chegada do voo, no formato 24 horas (hhmm).
+sched_arr_time; O horário local programado de chegada do voo, no formato 24 horas (hhmm).
+arr_delay; A diferença entre os horários real e programado de chegada do voo, em minutos. Um valor positivo indica uma chegada atrasada, enquanto um valor negativo indica uma chegada adiantada.
+carrier; O código de duas letras da companhia aérea do voo.
+flight; O número do voo.
+tailnum; O identificador único da aeronave usada no voo.
+origin; O código de três letras do aeroporto de origem do voo.
+dest; O código de três letras do aeroporto de destino do voo.
+air_time; A duração do voo, em minutos.
+distance; A distância entre os aeroportos de origem e destino, em milhas.
+hour; O componente da hora do horário programado de partida, no horário local.
+minute; O componente dos minutos do horário programado de partida, no horário local.
+time_hour; O horário programado de partida do voo, no formato local e de data-hora(yyyy-mm-dd hh)
+name; O nome da companhia aérea do voo.
