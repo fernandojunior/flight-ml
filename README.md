@@ -44,3 +44,22 @@ Abaixo estão as regras/orientações para a entrega:
     * O desenho da arquitetura pode ser apenas uma **imagem** (.png, .jpg)
 
 **Você deverá apresentar a solução durante a entrevista técnica**
+
+# Uso
+
+Arquitetura: https://drive.google.com/file/d/1StNi278qbjfBc4MO7TwZRaQr5WGPxkWw/view?usp=sharing
+
+1. Treine o modelo no Databricks
+  - Upload notebook/training.ipynb para o databricks
+  - Criar um cluster databricks: Databricks Runtime 15.4 LTS
+  - Executar todas as celulas do notebook para treinar o modelo e salvar no MLFlow
+  - Salve a URI do modelo: Experiments -> flight_delay_prediction -> Selecionar última execução -> Artifacts -> Salve Run ID
+
+Exemplo de Run ID:
+![alt text](docs/image.png)
+
+2. Crie container e execute, passando variáveis de ambiente como parâmetros
+´´´
+docker build -t databricks-mlflow-api .
+docker run  -p 8000:8000 -e DATABRICKS_HOST=https://<subdomain>.cloud.databricks.com/ -e DATABRICKS_TOKEN=<token> -e MLFLOW_RUN_ID=<run_id> databricks-mlflow-api
+´´´
